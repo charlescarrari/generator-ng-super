@@ -1,20 +1,23 @@
-(function(){
-  'use strict';
+(function() {
+	'use strict';
 
-  angular
-    .module('app.<%= module %>', [])
-    .config(configuration);
+	angular
+		.module('app.<%= module %>', [])
+		.config(configuration);
 
-  /* @ngInject */
-  function configuration($stateProvider){
+	/* @ngInject */
+	function configuration($stateProvider) {
 
-    //add your state mappings here
-    //$stateProvider
-    //  .state('Welcome', {
-    //    url:'/welcome',
-    //    templateUrl:'src/welcome/welcome.html',
-    //    controller: 'WelcomeCtrl as vm'
-    //  }
-    //);
-  }
+		//add your state mappings here
+		$stateProvider
+			.state('<%= module %>', {
+				url: '/<%= module %>',
+				templateUrl: 'src/<%= module %>/<%= module %>.html',
+				controller: '<%= component %>',
+				controllerAs: '<%= module %>',
+				id: '<%= module %>',
+				title: '<%= component %>',
+				requiresLogin: false
+			});
+	}
 }());

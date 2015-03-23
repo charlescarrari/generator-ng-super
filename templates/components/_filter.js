@@ -1,14 +1,14 @@
-(function(){
+(function() {
 
-  angular
-    .module('app.<%= module %>')
-    .filter('<%= component %>', <%= component %>);
+	angular
+		.module('app.<%= module %>')
+		.filter('<%= component %>', <%= component %> );
 
-  /* @ngInject */
-  function <%= component %>(){
-    return function (input){
-      return '<%= component %> filter: ' + input;
-    }
-  }
+	/* @ngInject */
+	function <%= component %> () {
+		return function(input) {
+			return '<%= component %> filter: ' + input;
+		}
+	}
 
 }());

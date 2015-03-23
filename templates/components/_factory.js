@@ -1,12 +1,12 @@
-(function(){
+(function() {
 	'use strict';
 
 	angular
 		.module('app.<%= module %>')
-		.factory('<%= component %>', <%= component %>)
+		.factory('<%= component %>', <%= component %> )
 
-  /* @ngInject */
-  function <%= component %>(){
+	/* @ngInject */
+	function <%= component %> () {
 		var service = {
 			testFunction: testFunction
 		}
@@ -15,9 +15,8 @@
 
 		////////////////////
 
-		function testFunction () {
+		function testFunction() {
 			console.info('This is a test function');
 		}
 	}
 }());
-
